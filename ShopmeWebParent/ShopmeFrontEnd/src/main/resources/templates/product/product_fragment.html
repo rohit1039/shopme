@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+	<div th:fragment="content" class="col-sm-2 col-md-4 col-lg-2">
+		<div class="card x bg-transparent border-secondary pro">
+			
+			<br/>
+			<div>
+				<a th:href="@{${product.URI}}"> <img
+					th:src="@{${product.mainImagePath}}" width="150" class="pro_img" />
+					<div class="card-body">
+						<br /> <b>[[${product.shortName}]]</b>
+					</div>
+				</a>
+			</div>
+
+			<div class="card-footer bg-transparent">
+				<div>
+					<table>
+						<tr>
+							<td><input type="text" class="product-detail-rating-star"
+								dir="ltr" data-size="xs" th:value="${product.averageRating}" />
+							</td>
+							<td><small>[[${product.reviewCount}]] rating(s)</small></td>
+						</tr>
+					</table>
+				</div>
+				<div>&nbsp;</div>
+				<div th:replace="product/product_fragment :: product_price"></div>
+			</div>
+		</div>
+		<br />
+	</div>
+
+	<div th:fragment="product_price" th:remove="tag">
+		<th:block th:if="${product.discountPercent &lt;= 0}">
+			<div
+				th:replace="product/product_fragment :: price_fragment(${product.price})"
+				class="price"></div>
+		</th:block>
+		<th:block th:if="${product.discountPercent > 0}">
+			<span style="font-size: larger; color: darkred">
+			<div th:replace="product/product_fragment :: price_fragment(${product.discountPrice})"
+					class="discount"></div></span>
+			<del>
+				<span><div
+						th:replace="product/product_fragment :: price_fragment(${product.price})"></div></span>
+			</del>
+		</th:block>
+	</div>
+
+	<div th:fragment="price_fragment(productPrice)" th:remove="tag">
+		<span th:if="${CURRENCY_SYMBOL_POSITION == 'Before price'}"
+			th:remove="tag">[[${CURRENCY_SYMBOL}]]</span>[[${#numbers.formatDecimal(productPrice,
+		1, THOUSANDS_POINT_TYPE, DECIMAL_DIGITS, DECIMAL_POINT_TYPE)}]]<span
+			th:if="${CURRENCY_SYMBOL_POSITION == 'After price'}" th:remove="tag">[[${CURRENCY_SYMBOL}]]</span>
+	</div>
+
+<script th:replace="fragments :: effect">
+	</script>
+</body>
+</html>

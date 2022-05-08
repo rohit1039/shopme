@@ -1,0 +1,10 @@
+package com.shopme.images;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class ImagesService {
+	
+	public List<String> 
+
+}

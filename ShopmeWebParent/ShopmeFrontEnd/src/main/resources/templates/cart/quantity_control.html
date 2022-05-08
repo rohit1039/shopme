@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div th:fragment="quantity_control(quantityValue, productId)">
+	<nav>
+		<ul class="pagination">
+			<li class="page-item">
+				<a class="page-link linkMinus" th:pid="${productId}" href=""><b>-</b></a>
+			</li>
+			<li class="page-item">
+				<input type="text" th:value="${quantityValue}" th:id="'quantity' + ${productId}" 
+					onkeydown="return false;" 
+					class="form-control text-center" style="width: 55px" />
+			</li>			
+			<li class="page-item">
+				<a class="page-link linkPlus" th:pid="${productId}" href=""><b>+</b></a>
+			</li>			
+		</ul>
+	</nav>
+</div>
+<script
+		src="https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js"></script>
+	<script>
+		window.sr = ScrollReveal({
+			reset : true
+		});
+		sr.reveal('nav', {
+			duration : 1000
+		});
+		sr.reveal('.card', {
+			duration : 1000
+		});
+		sr.reveal('.row', {
+			duration : 1000
+		});
+		sr.reveal('.col-xs', {
+			duration : 1000
+		});
+	</script>
+	<script>
+		if ('scrollRestoration' in history) {
+			history.scrollRestoration = 'manual';
+		}
+		// This is needed if the user scrolls down during page load and you want to make sure the page is scrolled to the top once it's fully loaded. This has Cross-browser support.
+		window.scrollTo(0, 0);
+	</script>
+</body>
+</html>
