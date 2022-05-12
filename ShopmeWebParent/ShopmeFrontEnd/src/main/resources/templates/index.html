@@ -15,6 +15,7 @@
 					<li data-target="#myCarousel" data-slide-to="2"></li>
 					<li data-target="#myCarousel" data-slide-to="3"></li>
 					<li data-target="#myCarousel" data-slide-to="4"></li>
+					<li data-target="#myCarousel" data-slide-to="5"></li>
 				</ol>
 				<div class="carousel-inner ci">
 					<div class="carousel-item active i">
@@ -57,11 +58,25 @@
 							</div>
 						</div>
 					</div>
+					
+					<div class="carousel-item i">
+						<img src="carouselSlides/cases.jpg" alt="cases" class="cases"></img>
+						<div class="container">
+							<div class="carousel-caption cs">
+							<h1>Smartphone Cases</h1>
+							<p>World's Best Smartphone cases available here.</p>
+								<p class="c">
+									<a class="btn btn-success cases_btn" th:href="@{'/c/' + cellphone_cases}">Browse
+										cases</a>
+								</p>
+							</div>
+						</div>
+					</div>
 
 					<div class="carousel-item f i">
 						<div class="container">
 							<div class="carousel-caption yellow">
-								<h1>Boat & JBL Headphones</h1>
+								<h1>Boat &amp; JBL Headphones</h1>
 								<p>Best headphone brand of all time available here.</p>
 								<p>
 									<a class="btn btn-primary" th:href="@{'/c/' + headphones}">Browse
@@ -77,7 +92,7 @@
 						<img src="carouselSlides/tablet.jpg" alt="phones" class="fifth"></img>
 						<div class="container">
 							<div class="carousel-caption text-end">
-								<h1>Apple & Samsung Tablets</h1>
+								<h1>Apple &amp; Samsung Tablets</h1>
 								<p>
 									Some branded and top-rated tablets are available, click below<br />
 									button to browse.
