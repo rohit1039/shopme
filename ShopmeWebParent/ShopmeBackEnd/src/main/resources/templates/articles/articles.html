@@ -15,8 +15,7 @@
 		<div th:replace="fragments :: search_form_and_message"></div>
 
 		<div class="full-details">
-			<table
-				class="table table-bordered table-striped table-responsive-xl">
+			<table class="table table-bordered table-striped table-responsive-xl">
 				<thead class="thead-dark">
 					<tr>
 						<th th:replace="fragments :: column_link('id', 'ID', 'none')" />
@@ -58,8 +57,9 @@
 							<div
 								th:replace="fragments :: edit('article', '/articles/edit/' + ${article.id})"></div>
 							&nbsp;&nbsp;
-							<div th:replace="fragments :: delete('article', ${article.id}, '/articles/delete/' + ${article.id}, true)"></div>						
-					</td>
+							<div
+								th:replace="fragments :: delete('article', ${article.id}, '/articles/delete/' + ${article.id}, true)"></div>
+						</td>
 					</tr>
 				</tbody>
 			</table>
@@ -76,10 +76,12 @@
 						<div
 							th:replace="fragments :: status(${article.published}, 'article', '/articles/' + ${article.id})"></div>
 						&nbsp;
-						<div th:replace="fragments :: edit('article', '/articles/edit/' + ${article.id})"></div>
-					&nbsp;
-					<div th:replace="fragments :: delete('article', ${article.id}, '/articles/delete/' + ${article.id}, true)"></div>
-				</div>
+						<div
+							th:replace="fragments :: edit('article', '/articles/edit/' + ${article.id})"></div>
+						&nbsp;
+						<div
+							th:replace="fragments :: delete('article', ${article.id}, '/articles/delete/' + ${article.id}, true)"></div>
+					</div>
 				</div>
 				<div>&nbsp;</div>
 			</div>
@@ -97,6 +99,7 @@
 
 		<div th:replace="fragments :: footer"></div>
 		<script th:replace="fragments :: darkest">
+			
 		</script>
 
 	</div>

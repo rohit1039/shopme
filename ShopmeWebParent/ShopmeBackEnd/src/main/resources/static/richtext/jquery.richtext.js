@@ -61,7 +61,8 @@
                 "Lucida Console",
                 "Tahoma",
                 "Times New Roman",
-                "Verdana"
+                "Verdana",
+                "Helvetica Neue"
             ],
             fontColor: true,
             fontSize: true,
