@@ -18,5 +18,4 @@ public class GeneralSettingBag extends SettingBag {
 	public void updateSiteLogo(String value) {
 		super.update("SITE_LOGO", value);
 	}
-	
 }

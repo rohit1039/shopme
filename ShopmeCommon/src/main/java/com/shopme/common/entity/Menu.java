@@ -1,4 +1,3 @@
-
 package com.shopme.common.entity;
 
 import javax.persistence.Column;
@@ -18,20 +17,20 @@ public class Menu {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-
+	
 	@Enumerated(EnumType.ORDINAL)
 	private MenuType type;
 
 	@Column(nullable = false, length = 128, unique = true)
 	private String title;
-
+	
 	@Column(nullable = false, length = 256, unique = true)
 	private String alias;
-
+	
 	private int position;
-
+	
 	private boolean enabled;
-
+	
 	@ManyToOne
 	@JoinColumn(name = "article_id")
 	private Article article;
@@ -121,5 +120,6 @@ public class Menu {
 	public String toString() {
 		return "Menu [id=" + id + ", type=" + type + ", title=" + title + ", position=" + position + "]";
 	}
-
+	
+	
 }

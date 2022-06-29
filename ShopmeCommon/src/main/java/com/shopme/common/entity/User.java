@@ -36,7 +36,6 @@ public class User extends IdBasedEntity {
 	
 	private boolean enabled;
 	
-	
 	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(
 			name = "users_roles",

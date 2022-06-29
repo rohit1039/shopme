@@ -155,12 +155,6 @@ public class Category extends IdBasedEntity {
 		return Constants.S3_BASE_URI + "/category-images/" + this.id + "/" + this.image;
 	}
 	
-	@Transient
-	public String getImageSite()
-	{
-		return Constants.S3_BASE_URI+"/images/";
-	}
-	
 	public boolean isHasChildren() {
 		return hasChildren;
 	}

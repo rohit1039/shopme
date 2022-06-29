@@ -51,6 +51,7 @@ public class SettingController {
 		
 		saveSiteLogo(multipartFile, settingBag);
 		saveCurrencySymbol(request, settingBag);
+		
 		updateSettingValuesFromForm(request, settingBag.list());
 		
 		ra.addFlashAttribute("message", "General settings have been saved.");
@@ -69,7 +70,6 @@ public class SettingController {
 			AmazonS3Util.uploadFile(uploadDir, fileName, multipartFile.getInputStream());
 		}
 	}
-	
 	
 	private void saveCurrencySymbol(HttpServletRequest request, GeneralSettingBag settingBag) {
 		Integer currencyId = Integer.parseInt(request.getParameter("CURRENCY_ID"));

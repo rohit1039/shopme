@@ -102,20 +102,12 @@ nav li:last-child {
 	div.less-details {
 		display: block;
 	}
-	.container-fluid .responsive {
-		margin: auto;
-		height: 250px;
-		width: 250px;
-	}
 	div.car {
 		display: none;
 	}
 	div.container-fluid h1 {
 		margin-top: 2%;
 		font-size: x-large;
-	}
-	div.container-fluid .front-images {
-		width: 100px;
 	}
 	.pro {
 		width: 300px;
@@ -136,11 +128,6 @@ nav li:last-child {
 	}
 	.hideable-column {
 		display: none
-	}
-	.container-fluid .responsive {
-		margin: auto;
-		height: 260px;
-		width: 260px;
 	}
 	.ci {
 		height: 26rem;
@@ -229,19 +216,12 @@ nav li:last-child {
 	margin-left: 40%;
 	font-size: 35px;
 }
-
 .cs p {
 	margin-left: 40%;
 }
 
 .p {
 	padding: 0.5em;
-}
-
-.front-images {
-	width: 80%;
-	margin: auto;
-	display: flex;
 }
 
 .ci .third {
@@ -255,11 +235,6 @@ nav li:last-child {
 
 .price {
 	display: inline;
-}
-
-.responsive {
-	height: 95%;
-	width: 230px;
 }
 
 .discount {

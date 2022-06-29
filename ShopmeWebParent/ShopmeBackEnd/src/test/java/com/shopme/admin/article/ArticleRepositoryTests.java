@@ -19,14 +19,13 @@ import com.shopme.common.entity.ArticleType;
 @Rollback(false)
 public class ArticleRepositoryTests {
 
-	@Autowired
-	private ArticleRepository repo;
-
+	@Autowired private ArticleRepository repo;
+	
 	@Test
 	public void testListMenuBoundArticles() {
 		List<Article> listArticles = repo.findByTypeOrderByTitle(ArticleType.MENU_BOUND);
 		assertThat(listArticles).isNotEmpty();
-
+		
 		listArticles.forEach(System.out::println);
 	}
 }

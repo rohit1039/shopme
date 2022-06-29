@@ -87,12 +87,10 @@
 							title="Move this menu item down"></a>
 					</div>
 					<div class="col-2">
-						<div
-							th:replace="fragments :: edit('menu item', '/menus/edit/' + ${menuItem.id})" />
+						<div th:replace="fragments :: edit('menu item', '/menus/edit/' + ${menuItem.id})"></div>
 					</div>
 					<div class="col-2">
-						<div
-							th:replace="fragments :: delete('menu item', ${menuItem.id}, '/menus/delete/' + ${menuItem.id}, true)" />
+						<div th:replace="fragments :: delete('menu item', ${menuItem.id}, '/menus/delete/' + ${menuItem.id}, true)" />
 					</div>
 				</div>
 				<div>&nbsp;</div>
@@ -108,9 +106,7 @@
 		</div>
 
 		<div th:replace="fragments :: footer"></div>
-		<script th:replace="fragments :: darkest">
-			
-		</script>
+		<script th:replace="fragments :: darkest"></script>
 
 	</div>
 	<script th:src="@{/js/common_list.js}"></script>

@@ -108,7 +108,7 @@ public class OrderController {
 	public String editOrder(@PathVariable("id") Integer id, Model model, RedirectAttributes ra,
 			HttpServletRequest request) {
 		try {
-			Order order = orderService.get(id);
+			Order order = orderService.get(id);;
 			
 			List<Country> listCountries = orderService.listAllCountries();
 			

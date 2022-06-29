@@ -26,5 +26,8 @@ public interface ProductRepository extends PagingAndSortingRepository<Product, I
 			+ " p.reviewCount = (SELECT COUNT(r.id) FROM Review r WHERE r.product.id =?1) "
 			+ "WHERE p.id = ?1")
 	@Modifying
-	public void updateReviewCountAndAverageRating(Integer productId);	
+	public void updateReviewCountAndAverageRating(Integer productId);
+	
+	@Query("SELECT p FROM Product p WHERE p.enabled=true AND p.brand.id=?1")
+	public Page<Product> listByBrand(Integer brandId, Pageable pageable);	
 }

@@ -18,7 +18,6 @@ import software.amazon.awssdk.services.s3.model.PutObjectRequest;
 import software.amazon.awssdk.services.s3.model.S3Object;
 
 public class AmazonS3Util {
-	
 	private static final Logger LOGGER = LoggerFactory.getLogger(AmazonS3Util.class);
 	private static final String BUCKET_NAME;
 	
